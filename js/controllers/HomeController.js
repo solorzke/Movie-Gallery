@@ -88,8 +88,49 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
-	
+	},
+    {
+      title:      'Jaws', 
+      iscore:     8.0,
+      rating:     'PG',
+      runtime:    124,
+      released:   new Date('1975', '06', '20'),
+      country:    'USA',
+      posters:    ['img/jaws1.jpg', 'img/jaws2.jpg'],
+      imdb:       'https://www.imdb.com/title/tt0073195',
+      website:    'http://www.jawsonbluray.com/',
+      likes:      812,
+      dislikes:   101,
+      posterindex: 0
+      },
+    { 
+      title:      'Jurassic Park', 
+      iscore:     8.1,
+      rating:     'PG-13',
+      runtime:    127,
+      released:   new Date('1993', '06', '11'),
+      country:    'USA',
+      posters:    ['img/jp1.jpg', 'img/jp2.jpg'],
+      imdb:       'https://www.imdb.com/title/tt0107290',
+      website:    'http://www.jurassicworld.com/',
+      likes:      812,
+      dislikes:   101,
+      posterindex: 0
+      },
+    { 
+      title:      'Spider-Man 2', 
+      iscore:     7.3,
+      rating:     'PG-13',
+      runtime:    127,
+      released:   new Date('2004', '06', '30'),
+      country:    'USA',
+      posters:    ['img/sp1.jpg', 'img/sp2.jpg'],
+      imdb:       'https://www.imdb.com/title/tt0316654',
+      website:    'https://marvel.com/movies/movie/1/spider-man_2',
+      likes:      812,
+      dislikes:   101,
+      posterindex: 0
+      }  
 	
   ];
 	
