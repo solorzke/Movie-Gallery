@@ -93,28 +93,31 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
   ];
 	
-	
-
-	
 	/* ADD VARIABLES FOR STEP 3 HERE */
 	$scope.title = "IMDB + Kevin Solorzano's Top 8 Movies";
       $scope.owner = "Kevin Solorzano";
       $scope.github = "https://github.com/solorzke/is219-Project3";
 	
-	
-	
-	
-	
-	
-	
 	/* ADD FUNCTIONS FOR STEP 7 HERE */
-		
-	
-	
-	
-	
-	
-	
-	
-	
+	$scope.like = function (index){
+            $scope.movies[index].likes++;
+      }
+
+      $scope.dislike = function (index){
+            $scope.movies[index].dislikes++;
+      }
+
+      $scope.posterClick = function (index){
+            if($scope.movies[index].posterindex < $scope.movies[index].posters.length){
+                  $scope.movies[index].posterindex++;
+            }
+            else if($scope.movies[index].posterindex === $scope.movies[index].posters.length){
+                  $scope.movies[index].posterindex = 0;
+            }
+      }
+
+      $scope.timeText = function (minutes){
+            var movieLength = new Date(minutes, "HH mm");
+            return movieLength;
+      }
 }]);
