@@ -42,7 +42,7 @@
 						
 						<p class="title">{{movies[i].title}} ({{movies[i].country}})</p> 
 						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[i].iscore}} </p>
-						<p class="runtime">Runtime: {{movies[i].runtime}}</p> 
+						<p class="runtime">Runtime: {{ timeText(movies[i].runtime) }}</p> 
 						<p class="released">Released: {{ movies[i].released | date:"MMM d, y"}} | Rated: {{movies[i].rating}}</p>
 						<p class="websites">Websites: <a>{{movies[i].imdb}}</a> | <a>{{movies[i].website}}</a></p>
 						

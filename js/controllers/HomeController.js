@@ -97,10 +97,10 @@ app.controller('HomeController', ['$scope', function($scope) {
       released:   new Date('1975', '06', '20'),
       country:    'USA',
       posters:    ['img/jaws1.jpg', 'img/jaws2.jpg'],
-      imdb:       'https://www.imdb.com/title/tt0073195',
+      imdb:       'https://www.imdb.com/title/tt0073195/?ref_=fn_al_tt_1',
       website:    'http://www.jawsonbluray.com/',
-      likes:      812,
-      dislikes:   101,
+      likes:      723,
+      dislikes:   98,
       posterindex: 0
       },
     { 
@@ -111,10 +111,10 @@ app.controller('HomeController', ['$scope', function($scope) {
       released:   new Date('1993', '06', '11'),
       country:    'USA',
       posters:    ['img/jp1.jpg', 'img/jp2.jpg'],
-      imdb:       'https://www.imdb.com/title/tt0107290',
+      imdb:       'https://www.imdb.com/title/tt0107290/?ref_=nv_sr_2',
       website:    'http://www.jurassicworld.com/',
-      likes:      812,
-      dislikes:   101,
+      likes:      1212,
+      dislikes:   201,
       posterindex: 0
       },
     { 
@@ -125,10 +125,10 @@ app.controller('HomeController', ['$scope', function($scope) {
       released:   new Date('2004', '06', '30'),
       country:    'USA',
       posters:    ['img/sp1.jpg', 'img/sp2.jpg'],
-      imdb:       'https://www.imdb.com/title/tt0316654',
+      imdb:       'https://www.imdb.com/title/tt0316654/?ref_=nv_sr_2',
       website:    'https://marvel.com/movies/movie/1/spider-man_2',
-      likes:      812,
-      dislikes:   101,
+      likes:      832,
+      dislikes:   23,
       posterindex: 0
       }  
 	
@@ -161,7 +161,8 @@ app.controller('HomeController', ['$scope', function($scope) {
       }
 
       $scope.timeText = function (minutes){
-            var movieLength = new Date(minutes, "HH mm");
-            return movieLength;
+            $scope.hour = Math.floor(minutes / 60);
+            $scope.min = minutes % 60;
+            return $scope.hour + "h " + $scope.min + "m";
       }
 }]);
