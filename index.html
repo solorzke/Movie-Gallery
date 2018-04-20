@@ -32,27 +32,27 @@
 
     <div class="main" ng-controller="HomeController">
       
-      <div class="container" ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+      <div class="container" >
+      	<div ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+	        <div class="col-md-6"> 
+	            <div class="thumbnail">
 
-        <div class="col-md-6"> 
-            <div class="thumbnail">
-
-					<img class="poster" ng-click="posterClick(i)" ng-src="{{movies[i].posters[movies[i].posterindex]}}" />
-					<div class="imageInfo">Poster {{movies[i].posterindex+1}} of {{movies[i].posters.length}}</div>
-					
-					<p class="title">{{movies[i].title}} ({{movies[i].country}})</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[i].iscore}} </p>
-					<p class="runtime">Runtime: {{movies[i].runtime}}</p> 
-					<p class="released">Released: {{ movies[i].released | date:"MMM d, y"}} | Rated: {{movies[i].rating}}</p>
-					<p class="websites">Websites: <a>{{movies[i].imdb}}</a> | <a>{{movies[i].website}}</a></p>
-					
-		            <div class="social">
-		              <p class="likes" ng-click="like(i)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[i].likes}}</p>
-		              <p class="dislikes" ng-click="dislike(i)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[i].dislikes}}</p>
-		            </div>
-            </div> 
-        </div>
-
+						<img class="poster" ng-click="posterClick(i)" ng-src="{{movies[i].posters[movies[i].posterindex]}}" />
+						<div class="imageInfo">Poster {{movies[i].posterindex+1}} of {{movies[i].posters.length}}</div>
+						
+						<p class="title">{{movies[i].title}} ({{movies[i].country}})</p> 
+						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movies[i].iscore}} </p>
+						<p class="runtime">Runtime: {{movies[i].runtime}}</p> 
+						<p class="released">Released: {{ movies[i].released | date:"MMM d, y"}} | Rated: {{movies[i].rating}}</p>
+						<p class="websites">Websites: <a>{{movies[i].imdb}}</a> | <a>{{movies[i].website}}</a></p>
+						
+			            <div class="social">
+			              <p class="likes" ng-click="like(i)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movies[i].likes}}</p>
+			              <p class="dislikes" ng-click="dislike(i)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{movies[i].dislikes}}</p>
+			            </div>
+	            </div> 
+	        </div>
+	    </div>
       </div>
     </div>
 
